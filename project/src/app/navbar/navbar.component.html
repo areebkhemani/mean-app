@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                
+
+                <li *ngIf="!isLoggedIn()" class="nav-item ">
+                    <a class="nav-link" routerLinkActive="active current" routerLink="/signup">Sign up</a>
+                </li>
+
+                <li *ngIf="!isLoggedIn()" class="nav-item ">
+                    <a class="nav-link" routerLinkActive="active current" routerLink="/login">Login</a>
+                </li>
+                <li *ngIf="isLoggedIn() && user() === 'entrepreneurist'" class="nav-item ">
+                    <a class="nav-link" routerLinkActive="active current" routerLink="/Post">Create Post</a>
+                </li>
+
+                <li *ngIf="isLoggedIn() && user() === 'entrepreneurist'" class="nav-item ">
+                    <a class="nav-link" routerLinkActive="active current" routerLink="/myposts">My post</a>
+                </li>
+
+                
+
+                <li  *ngIf="isLoggedIn() && user() === 'doner'" class="nav-item">
+                    <a class="nav-link" routerLinkActive="active current" routerLink="/List">Posts</a>
+                </li>
+
+                <li  *ngIf="isLoggedIn() && user() === 'doner'" class="nav-item">
+                    <a class="nav-link" routerLinkActive="active current" routerLink="/mydonation">My Donations</a>
+                </li>
+
+                
+
+
+                </ul>
+    </div>
+
+    
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li *ngIf="isLoggedIn()" class="nav-item">
+            <a class="nav-link" routerLinkActive="active current" routerLink="/Home" (click)="logout()">Logout</a>
+        </li>
+    </ul>
+</nav>

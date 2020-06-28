@@ -1,0 +1,47 @@
+
+<bootstrap-panel>
+    <ng-container class="heading">
+            Donate
+     </ng-container>
+        
+     
+     
+     <div class="body">  
+    
+    
+      
+        <form #create="ngForm">
+            <div ngModelGroup="donate">
+                  
+    
+             <div class="form-group">
+               <label for="email" class="for">Enter visa</label>
+               <input required [(ngModel)]="donate.visa"  name="visa" #visa="ngModel" type="text" id="visa" class="form-control">
+              
+           </div>
+    
+           <div class="form-group">
+            <label for="email" class="for">enter amount</label>
+            <input required [(ngModel)]="donate.amount"  name="amount" #amount="ngModel" type="text" id="amount" class="form-control">
+           
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="for">enter review</label>
+            <input required [(ngModel)]="donate.review"  name="review" #review="ngModel" type="text" id="review" class="form-control">
+           
+        </div>
+                 
+                   
+        <button type="submit"  class="btn btn-primary"  (click)="adddonation(create)" >create</button>
+                
+          
+                 
+            </div>
+            
+        </form>
+      
+      
+      </div>
+      
+    </bootstrap-panel>

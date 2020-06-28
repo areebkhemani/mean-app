@@ -1,0 +1,11 @@
+:host {
+    display: block;
+    margin-top: 1rem;
+  }
+ 
+  .mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover,
+.mat-expansion-panel-header.mat-expanded:focus {
+    background-color: rgba(122, 117, 117, 0.6);
+}
+

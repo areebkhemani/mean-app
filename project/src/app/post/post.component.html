@@ -1,0 +1,41 @@
+
+<bootstrap-panel>
+<ng-container class="heading">
+        Create a Post
+ </ng-container>
+    
+ 
+ 
+ <div class="body">  
+
+
+  
+    <form #create="ngForm">
+        <div ngModelGroup="post">
+              
+
+         <div class="form-group">
+           <label for="title" class="for">Title</label>
+           <input required [(ngModel)]="post.title"  name="title" #title="ngModel" type="text" id="title" class="form-control">
+          
+       </div>
+
+       <div class="form-group">
+        <label for="content" class="for">explain</label>
+        <input required [(ngModel)]="post.content"  name="content" #content="ngModel" type="text" id="content" class="form-control">
+       
+    </div>
+             
+               
+            
+            
+      
+             <button type="submit"  class="btn btn-primary"  (click)="Createpost(create)" >create</button>
+        </div>
+        
+    </form>
+  
+  
+  </div>
+  
+</bootstrap-panel>

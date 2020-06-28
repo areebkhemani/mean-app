@@ -1,0 +1,32 @@
+<bootstrap-panel>
+    <ng-container class="heading">
+       Donations
+    </ng-container>
+    <div class="body"> 
+        <div *ngIf="data.length>0; then listdata else nodata"></div>
+
+        <ng-template #listdata>
+            
+            <ul class="list-group" *ngFor="let donation of data">
+                <li class="list-group-item">
+                    <div>
+                      
+                        <p> To: {{donation.posttitle}} </p>
+                           <p> Amount: {{donation.amount}} $</p>
+                           
+                          
+                         
+                           </div>
+                           
+                        </li>
+                    </ul>
+
+
+                
+        </ng-template>
+        
+        <ng-template #nodata>
+            <h4>No Data Exists!</h4>
+        </ng-template>
+    </div>
+    </bootstrap-panel>

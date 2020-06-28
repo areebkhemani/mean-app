@@ -1,0 +1,31 @@
+<bootstrap-panel>
+  <ng-container class="heading">
+     Posts
+  </ng-container>
+  <div class="body"> 
+      <div *ngIf="data.length>0; then listdata else nodata"></div>
+
+      <ng-template #listdata>
+          
+          <ul class="list-group" *ngFor="let post of data">
+              <li class="list-group-item">
+                  <div>
+                         <p>Title:{{post.title}}</p>
+                         <p>Content:{{post.content}}</p>
+                        
+                         <p type="button" class="btn btn-primary edit" (click)="viewdonation(post)">View</p>
+                         <p type="button" class="btn btn-primary edit" (click)="startup(post)">Startup</p>
+                         </div>
+                         
+                      </li>
+                  </ul>
+
+
+              
+      </ng-template>
+      
+      <ng-template #nodata>
+          <h4>No Data Exists!</h4>
+      </ng-template>
+  </div>
+  </bootstrap-panel>

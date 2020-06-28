@@ -1,0 +1,38 @@
+
+<bootstrap-panel>
+    <ng-container class="heading">
+            Review
+     </ng-container>
+        
+     
+     
+     <div class="body">  
+    
+    
+      
+        <form #create="ngForm">
+            <div ngModelGroup="start">
+                  
+    
+             <div class="form-group">
+               <label for="review" class="for">Enter review</label>
+               <input required [(ngModel)]="start.review"  name="review" #review="ngModel" type="text" id="review" class="form-control">
+              
+           </div>
+    
+         
+        </div>
+                 
+                   
+        <button type="submit"  class="btn btn-primary"  (click)="adddonation(create)" >create</button>
+                
+          
+                 
+            
+            
+        </form>
+      
+      
+      </div>
+      
+    </bootstrap-panel>
